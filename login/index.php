@@ -4,15 +4,16 @@ include ('../app/config.php');
 
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<title>Free Snow Bootstrap Website Template | Checkout :: w3layouts</title>
-<link href="../public/css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="../public/css/style.css" rel='stylesheet' type='text/css' />
+<title>Login - Woocomerce</title>
+<link href="<?php echo $URL;?>/public/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="<?php echo $URL;?>/public/css/style.css" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<script src="../public/js/jquery.min.js"></script>
+<script src="<?php echo $URL;?>/public/js/jquery.min.js"></script>
 <script type="text/javascript">
         $(document).ready(function() {
             $(".dropdown img.flag").addClass("flagvisibility");
@@ -52,10 +53,10 @@ include ('../app/config.php');
 			  <div class="col-md-12">
 				 <div class="header-left">
 					 <div class="logo">
-						<a href="../public/index.html"><img src="../public/images/logo.png" alt=""/></a>
+						<a href="<?php echo $URL;?>/public/index.html"><img src="<?php echo $URL;?>/public/images/logo.png" alt=""/></a>
 					 </div>
 					 <div class="menu">
-						  <a class="toggleMenu" href="#"><img src="../public/images/nav.png" alt="" /></a>
+						  <a class="toggleMenu" href="#"><img src="<?php echo $URL;?>/public/images/nav.png" alt="" /></a>
 						    <ul class="nav" id="nav">
 						    	<li><a href="shop.html">Shop</a></li>
 						    	<li><a href="team.html">Team</a></li>
@@ -65,7 +66,7 @@ include ('../app/config.php');
 								<li><a href="contact.html">Contact</a></li>								
 								<div class="clear"></div>
 							</ul>
-							<script type="text/javascript" src="../public/js/responsive-nav.js"></script>
+							<script type="text/javascript" src="<?php echo $URL;?>/public/js/responsive-nav.js"></script>
 				    </div>							
 	    		    <div class="clear"></div>
 	    	    </div>
@@ -81,8 +82,8 @@ include ('../app/config.php');
 							</div>
 						</div>
 						<!----search-scripts---->
-						<script src="../public/js/classie.js"></script>
-						<script src="../public/js/uisearch.js"></script>
+						<script src="<?php echo $URL;?>/public/js/classie.js"></script>
+						<script src="<?php echo $URL;?>/public/js/uisearch.js"></script>
 						<script>
 							new UISearch( document.getElementById( 'sb-search' ) );
 						</script>
@@ -90,16 +91,16 @@ include ('../app/config.php');
 					 <li><a class="active-icon c1" href="#"> </a>
 						<ul class="sub-icon1 list">
 						  <div class="product_control_buttons">
-						  	<a href="#"><img src="../public/images/edit.png" alt=""/></a>
-						  		<a href="#"><img src="../public/images/close_edit.png" alt=""/></a>
+						  	<a href="#"><img src="<?php echo $URL;?>/public/images/edit.png" alt=""/></a>
+						  		<a href="#"><img src="<?php echo $URL;?>/public/images/close_edit.png" alt=""/></a>
 						  </div>
 						   <div class="clear"></div>
-						  <li class="list_img"><img src="../public/images/1.jpg" alt=""/></li>
+						  <li class="list_img"><img src="<?php echo $URL;?>/public/images/1.jpg" alt=""/></li>
 						  <li class="list_desc"><h4><a href="#">velit esse molestie</a></h4><span class="actual">1 x
                           $12.00</span></li>
 						  <div class="login_buttons">
-							 <div class="check_button"><a href="checkout.html">Check out</a></div>
-							 <div class="login_button"><a href="login.html">Login</a></div>
+							 <div class="check_button"><a href="<?php echo $URL;?>">borrar</a></div>
+							 <div class="login_button"><a href="">tambien borrar</a></div>
 							 <div class="clear"></div>
 						  </div>
 						  <div class="clear"></div>
@@ -129,7 +130,7 @@ include ('../app/config.php');
 				 <div class="login-title">
 	           		<h4 class="title">Registered Customers</h4>
 					<div id="loginbox" class="loginbox">
-						<form action="../app/controllers/login/ingreso.php" method="post" name="login" id="login-form">
+						<form action="<?php echo $URL;?>/app/controllers/login/ingreso.php" method="post" name="login" id="login-form">
 						  <fieldset class="input">
 						    <p id="login-form-username">
 						      <label for="modlgn_username">Email</label>
@@ -211,12 +212,12 @@ include ('../app/config.php');
 				        <dt><a href="#"><span>Change Region</span></a></dt>
 				        <dd>
 				            <ul>
-				                <li><a href="#">Australia<img class="flag" src="../public/images/as.png" alt="" /><span class="value">AS</span></a></li>
-				                <li><a href="#">Sri Lanka<img class="flag" src="../public/images/srl.png" alt="" /><span class="value">SL</span></a></li>
-				                <li><a href="#">Newziland<img class="flag" src="../public/images/nz.png" alt="" /><span class="value">NZ</span></a></li>
-				                <li><a href="#">Pakistan<img class="flag" src="../public/images/pk.png" alt="" /><span class="value">Pk</span></a></li>
-				                <li><a href="#">United Kingdom<img class="flag" src="../public/images/uk.png" alt="" /><span class="value">UK</span></a></li>
-				                <li><a href="#">United States<img class="flag" src="../public/images/us.png" alt="" /><span class="value">US</span></a></li>
+				                <li><a href="#">Australia<img class="flag" src="<?php echo $URL;?>/public/images/as.png" alt="" /><span class="value">AS</span></a></li>
+				                <li><a href="#">Sri Lanka<img class="flag" src="<?php echo $URL;?>/public/images/srl.png" alt="" /><span class="value">SL</span></a></li>
+				                <li><a href="#">Newziland<img class="flag" src="<?php echo $URL;?>/public/images/nz.png" alt="" /><span class="value">NZ</span></a></li>
+				                <li><a href="#">Pakistan<img class="flag" src="<?php echo $URL;?>/public/images/pk.png" alt="" /><span class="value">Pk</span></a></li>
+				                <li><a href="#">United Kingdom<img class="flag" src="<?php echo $URL;?>/public/images/uk.png" alt="" /><span class="value">UK</span></a></li>
+				                <li><a href="#">United States<img class="flag" src="<?php echo $URL;?>/public/images/us.png" alt="" /><span class="value">US</span></a></li>
 				            </ul>
 				         </dd>
 	   				  </dl>
