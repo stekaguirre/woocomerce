@@ -22,7 +22,7 @@ if( ($contador>0) && (password_verify($password_user, $hash)) ){
     echo "bienvenido al sistema";
     session_start();
     $_SESSION['sesion_email'] = $email;
-    header('Location: '.$URL.'/admin.php');
+    header('Location: '.$URL.'/admin');
 }else{
     echo "error en los datos";
     header('Location: '.$URL.'/login');
