@@ -6,7 +6,10 @@ include ('../app/config.php');
 <html>
 
 <head>
-<title>Login - Woocomerce</title>
+<title>Login - <?php echo APP_NAME;?></title>
+<!-- Libreria Sweetallert2-->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- ///Libreria Sweetallert2-->
 <link href="<?php echo $URL;?>/public/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="<?php echo $URL;?>/public/css/style.css" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -45,9 +48,35 @@ include ('../app/config.php');
             });
         });
      </script>
+
+	 
+    
  </head>
 <body>
 	<div class="header">
+
+	<?php
+    session_start();
+    
+    if(isset($_SESSION['mensaje'])){
+        $respuesta = $_SESSION['mensaje'];?>
+
+        <script>
+                Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: '<?php echo $respuesta ?>',
+                showConfirmButton: false,
+                timer: 1500
+                })
+        </script>
+
+        <?php
+            }
+
+            ?>
+
+
 		<div class="container">
 			<div class="row">
 			  <div class="col-md-12">

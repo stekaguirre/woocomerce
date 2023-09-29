@@ -1,14 +1,15 @@
 
 <!-- INCLUDE -->
-  <?php
+<?php
   include ("../app/config.php")
   ?>
 <!-- ///INCLUDE -->
 <!-- SESSION -->
   <?php
   session_start();
-  if(isset($_SESSION['sesion_email'])){
-    echo "si existe la session de ".$_SESSION['sesion_email'];
+  if(isset($_SESSION['session_email'])){
+   // echo "si existe la session de ".$_SESSION['session_email'];
+   $email_session = $_SESSION['session_email'];
   }else{
     echo "no existe la session ....favor logearte";
     header('Location: '.$URL.'/index.html');
@@ -30,10 +31,23 @@
       <link rel="stylesheet" href="<?php echo $URL;?>/public/templeates/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
       <!-- Theme style -->
       <link rel="stylesheet" href="<?php echo $URL;?>/public/templeates/AdminLTE-3.2.0/dist/css/adminlte.min.css">
+      <!-- LIBRERIA DE SWEETALERT -->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
   <!-- ////HEAD -->
   <!-- BODY -->
     <body class="hold-transition sidebar-mini">
+  <!-- MENSAJE SWEETALERT -->
+    <script>
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'hola <br><?php echo $_SESSION['session_email'];?><br> Bienvenido',
+          showConfirmButton: false,
+          timer: 3000
+        })
+    </script>
+  <!-- /////MENSAJE SWEETALER -->  
       <!-- wrapper --> 
         <div class="wrapper">
           <!-- MENU DE NAVEGACION DERECHA -->
