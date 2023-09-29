@@ -64,8 +64,17 @@
               <!-- ////CABEZERA DERECHA LINK -->  
             </nav>
           <!-- //// MENU DE NAVEGACION DERECHA-->
+
           <!-- MENU DE NAVEGACION IZQUIERDA -->
             <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+              <!-- LOGO Y NOMBRE DE PAGINA -->
+                <a href="<?php echo $URL;?>" class="brand-link">
+                    <img src="<?php echo $URL;?>/public/images/logotienda.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                    <span class="brand-text font-weight-light"><?php echo APP_NAME;?></span>
+                </a>
+              <!-- ///LOGO Y NOMBRE DE PAGINA -->
+  
               <!-- INFO Y FOTO DE PERFIL -->
                 <div class="sidebar"> 
                   <div class="user-panel mt-3 pb-3 mb-3 d-flex">
@@ -80,6 +89,7 @@
                     </div>
                   </div>
               <!--//// INFO Y FOTO DE PERFIL -->
+
               <!-- MENU CON MIS PAGINAS -->
                   <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -124,7 +134,7 @@
                         </a>
                       </li>
                       <li class="nav-item">
-                        <a href="#" class="nav-link active" style="background-color:red">
+                        <a href="<?php echo $URL; ?>/app/controllers/login/cerrar_session.php" class="nav-link active" style="background-color:red">
                           <i class="nav-icon fas fa-door-open"></i>
                           <p>
                             Cerrar session
