@@ -9,7 +9,7 @@ define('BD','woocomerce');
 $URL = "http://localhost/woocomerce";
 
 date_default_timezone_set("America/Bogota");
-$fechaHora = date('Y-m-d H:i:s');
+$fechahora = date('Y-m-d H:i:s');
 
 $servidor = "mysql:dbname=".BD.";host=".SERVIDOR;
 

@@ -22,17 +22,7 @@
   <!-- ////HEAD -->
   <!-- BODY -->
     <body class="hold-transition sidebar-mini">
-    <!-- MENSAJE SWEETALERT -->
-        <script>
-            Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'hola <br><?php echo $_SESSION['session_email'];?><br> Bienvenido',
-            showConfirmButton: false,
-            timer: 3000
-            })
-        </script>
-    <!-- /////MENSAJE SWEETALER -->  
+      
     <!-- wrapper --> 
             <div class="wrapper">
             <!-- MENU DE NAVEGACION DERECHA -->
