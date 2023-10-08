@@ -65,7 +65,7 @@
                         <th>Nro</th>
                         <th>Nombre</th>
                         <th>Email</th>
-                        <th>Cargo</th>
+                        <th>descripcion</th>
                         <th>Aciones</th>
                       </tr>
                       <tbody>
@@ -76,7 +76,7 @@
                               <td><?php echo $contador = $contador + 1 ; ?></td>
                               <td><?php echo $usuarios_dato['nombres']; ?></td>
                               <td><?php echo $usuarios_dato['email']; ?></td>
-                              <td><?php echo $usuarios_dato['cargo']; ?></td>
+                              <td><?php echo $usuarios_dato['descripcion']; ?></td>
                               <td>
                                <div class="btn-group" role="group" aria-label="Basic example">
                                 <button type="button" class="btn btn-info">Ver</button>

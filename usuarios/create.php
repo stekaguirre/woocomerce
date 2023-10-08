@@ -90,12 +90,9 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label for="">Cargo</label>
-                            <select name="cargo" id="" class="form-control">
-                              <option value="Administrador">Administrador</option>
-                              <option value="Vendedor">Vendedor</option>
-                              <option value="Cliente">Cliente</option>
-                            </select>
+                            <label for=""><b>Mensaje</b></label>
+                            <textarea name="descripcion" id="descripcion" 
+                            cols="30" rows="5" class="form-control"></textarea>
                           </div>
                         </div>
                       </div>
