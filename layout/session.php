@@ -17,7 +17,7 @@
 
   }else{
     echo "no existe la session ....favor logearte";
-    header('Location: '.$URL.'/index.html');
+    header('Location: '.$URL.'/login');
   }
   ?>
 <!-- ////SESSION -->

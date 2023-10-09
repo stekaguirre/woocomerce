@@ -46,7 +46,11 @@
 
 
 <!-- CONTENIDO DERECHO MAIN O BODY -->
-                <h1>contenido</h1>
+<div class="content">
+      <div class="content-fluid">  
+        <h1>contenido</h1>
+      </div>
+    </div> 
 <!-- ///CONTENIDO DERECHO MAIN O BODY-->
             
 
