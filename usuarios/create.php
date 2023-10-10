@@ -50,7 +50,7 @@
             <div class="col-md-10">
               <div class="card card-outline card-primary">
                 <div class="card-header">
-                  <h3 class="card-title">Datos del Usuario</h3>
+                  <h3 class="card-title">Registrar Usuario</h3>
                   <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i 
                   class="fas fa-minus"></i>
@@ -62,13 +62,13 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label for="">Nombre y Apellido</label>
-                            <input type="text" name="nombres" class="form-control">
+                            <label for="">Nombre y Apellido <b>*</b> </label>
+                            <input type="text" name="nombres" class="form-control" required >
                           </div>
                         </div>
                         <div class="col-md-6">
                         <div class="form-group">
-                            <label for="">Email</label>
+                            <label for="">Email <b>*</b> </label>
                             <input type="email" name="email" class="form-control">
                           </div>
                         </div>
@@ -76,13 +76,13 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label for="">Contraseña</label>
+                            <label for="">Contraseña <b>*</b> </label>
                             <input type="text" name="password_user" class="form-control">
                           </div>
                         </div>
                         <div class="col-md-6">
                         <div class="form-group">
-                            <label for="">Verifica la Contraseña</label>
+                            <label for="">Verifica la Contraseña <b>*</b> </label>
                             <input type="text" name="password_repeat" class="form-control">
                           </div>
                         </div>
@@ -90,8 +90,8 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label for=""><b>Mensaje</b></label>
-                            <textarea name="descripcion" id="descripcion" 
+                            <label for="">Mensaje <b>*</b> </label>
+                            <textarea name="descripcion" id="descripcion" required
                             cols="30" rows="5" class="form-control"></textarea>
                           </div>
                         </div>

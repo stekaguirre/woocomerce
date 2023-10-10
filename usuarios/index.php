@@ -55,20 +55,20 @@
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i 
                   class="fas fa-minus"></i>
                   </button>
-                  </div>
-
-                  </div>
-
-                  <div class="card-body" style="display: block;">
-                    <table class="table table-bordered table-hover table-striped table-sm text-center">
-                      <tr>
-                        <th>Nro</th>
-                        <th>Nombre</th>
-                        <th>Email</th>
-                        <th>descripcion</th>
-                        <th>Aciones</th>
-                      </tr>
-                      <tbody>
+                </div>
+              </div>
+              <div class="card-body" style="display: block;">          
+                <table id="example1" class="table table-bordered table-striped table-sm text-center ">
+                  <thead>
+                  <tr>
+                      <th>Nro</th>
+                      <th>Nombre</th>
+                      <th>Email</th>
+                      <th>descripcion</th>
+                      <th>Aciones</th>
+                  </tr>
+                  </thead>
+                  <tbody>
                         <?php
                           $contador = 0;
                           foreach ( $usuarios_datos as $usuarios_dato){?>
@@ -79,17 +79,27 @@
                               <td><?php echo $usuarios_dato['descripcion']; ?></td>
                               <td>
                                <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-info">Ver</button>
-                                <button type="button" class="btn btn-success">Editar</button>
-                                <button type="button" class="btn btn-danger">Borrar</button>
+                                <button type="button" class="btn btn-info"><i class="bi bi-eye-fill"></i>Ver</button>
+                                <button type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i>Editar</button>
+                                <button type="button" class="btn btn-danger"><i class="bi bi-trash3"></i>Borrar</button>
                                </div>
                               </td>
                             </tr>
                           <?php  
                             }
                           ?>
-                      </tbody>                                                            
-                    </table>
+                      </tbody>
+                  <tfoot>
+                  <tr>
+                  <th>Nro</th>
+                      <th>Nombre</th>
+                      <th>Email</th>
+                      <th>descripcion</th>
+                      <th>Aciones</th>
+                  </tr>
+                  </tfoot>
+                </table>
+
                  </div>
 
               </div>
@@ -100,10 +110,54 @@
 <!-- ///CONTENIDO DERECHO MAIN O BODY-->
             
 
-
 <?php include ("../layout/footer.php");?>
 
-  
+<script>
+    $(function () {
+        $("#example1").DataTable({
+            "pageLength": 5,
+            "language": {
+                "emptyTable": "No hay información",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Usuarios",
+                "infoEmpty": "Mostrando 0 a 0 de 0 Usuarios",
+                "infoFiltered": "(Filtrado de _MAX_ total Usuarios)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Mostrar _MENU_ Usuarios",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscador:",
+                "zeroRecords": "Sin resultados encontrados",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            },
+            "responsive": true, "lengthChange": true, "autoWidth": false,
+            buttons: [{
+                extend: 'collection',
+                text: 'Reportes',
+                orientation: 'landscape',
+                buttons: [
+                  {text: 'Copiar',extend: 'copy'}, 
+                  {extend: 'pdf'},
+                  {extend: 'csv'},
+                  {extend: 'excel'},
+                  {text: 'Imprimir',extend: 'print'}
+                ]
+            },
+                {
+                    extend: 'colvis',
+                    text: 'Visor de columnas',
+                    collectionLayout: 'fixed one-column',
+                }
+            ],
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    });
+</script>
+
 
 
 
