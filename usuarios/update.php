@@ -1,9 +1,10 @@
 
 <!-- INCLUDE -->
- <?php
+<?php
   include ("../app/config.php");
   include ("../layout/session.php");
   include ("../layout/header.php");
+  include ("../app/controllers/usuarios/show_usuarios.php");
   ?>
 <!-- ///INCLUDE -->
 
@@ -16,7 +17,7 @@
                   <div class="container-fluid">
                     <div class="row mb-2">
                       <div class="col-sm-12">
-                        <h1 class="m-0">Creacion de Usuarios - <?php echo APP_NAME; ?></h1>
+                        <h1 class="m-0">Actualizar datos de - <?php echo $nombres; ?></h1>
                       </div>
                     </div>
                   </div>
@@ -29,9 +30,9 @@
         <div class="content-fluid">
           <div class="row">
             <div class="col-md-10">
-              <div class="card card-outline card-primary">
+              <div class="card card-success">
                 <div class="card-header">
-                  <h3 class="card-title">Registrar Usuario</h3>
+                  <h3 class="card-title"><?php echo $email;?></h3>
                   <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i 
                   class="fas fa-minus"></i>
@@ -43,37 +44,26 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label for="">Nombre y Apellido <b>*</b> </label>
-                            <input type="text" name="nombres" class="form-control" required >
+                            <label for="">Nombre y Apellido</label>
+                            <input type="text" name="nombres" 
+                            value="<?php echo $nombres;?>" class="form-control" disabled >
                           </div>
                         </div>
                         <div class="col-md-6">
                         <div class="form-group">
-                            <label for="">Email <b>*</b> </label>
-                            <input type="email" name="email" class="form-control">
+                            <label for="">Email</label>
+                            <input type="email" name="email" 
+                            value="<?php echo $email;?>" class="form-control" disabled >
                           </div>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label for="">Contraseña <b>*</b> </label>
-                            <input type="text" name="password_user" class="form-control">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="">Verifica la Contraseña <b>*</b> </label>
-                            <input type="text" name="password_repeat" class="form-control">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label for="">Mensaje <b>*</b> </label>
-                            <textarea name="descripcion" id="descripcion" required
-                            cols="30" rows="5" class="form-control"></textarea>
+                            <label for="">Mensaje</label>
+                            <input type="text" name="descripcion"  
+                            value="<?php echo $descripcion;?>" disabled 
+                            cols="30" rows="5" class="form-control"></input>
                           </div>
                         </div>
                       </div>
@@ -81,12 +71,13 @@
                       <br>
                       <div class="row">
                         <div class="col-md-12">
-                          <a href="<?php echo $URL; ?>/usuarios" class="btn btn-secondary">Cancelar</a>
-                          <input type="submit" class="btn btn-primary">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="index.php" type="button" class="btn btn-secondary">Atras</a>
+                                <a href="update.php?id=<?php echo $id_usuario ?>" type="button" class="btn btn-success">Editar</a>
+                                <a href="delete.php?id=<?php echo $id_usuario ?>" type="button" class="btn btn-danger">Borrar</a>
+                            </div>
                         </div>
                       </div>
-
-                    </form>
                    
                  </div>
 

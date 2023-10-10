@@ -1,6 +1,6 @@
 
 <!-- INCLUDE -->
-<?php
+ <?php
   include ("../app/config.php");
   include ("../layout/session.php");
   include ("../layout/header.php");
@@ -48,7 +48,7 @@
         <div class="content-fluid">
           <div class="row">
             <div class="col-md-10">
-              <div class="card card-outline card-primary">
+              <div class="card card-secondary">
                 <div class="card-header ">
                   <h3 class="card-title ">Todos los Usuarios</h3>
                   <div class="card-tools">
@@ -71,7 +71,9 @@
                   <tbody>
                         <?php
                           $contador = 0;
-                          foreach ( $usuarios_datos as $usuarios_dato){?>
+                          foreach ( $usuarios_datos as $usuarios_dato){
+                            $id_usuario = $usuarios_dato['id_usuario'];
+                            ?>
                             <tr>
                               <td><?php echo $contador = $contador + 1 ; ?></td>
                               <td><?php echo $usuarios_dato['nombres']; ?></td>
@@ -79,9 +81,9 @@
                               <td><?php echo $usuarios_dato['descripcion']; ?></td>
                               <td>
                                <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-info"><i class="bi bi-eye-fill"></i>Ver</button>
-                                <button type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i>Editar</button>
-                                <button type="button" class="btn btn-danger"><i class="bi bi-trash3"></i>Borrar</button>
+                                <a href="show.php?id=<?php echo $id_usuario ?>" type="button" class="btn btn-primary"><i class="bi bi-eye-fill"></i>Ver</a>
+                                <a href="update.php?id=<?php echo $id_usuario ?>" type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i>Editar</a>
+                                <a href="delete.php?id=<?php echo $id_usuario ?>" type="button" class="btn btn-danger"><i class="bi bi-trash3"></i>Borrar</a>
                                </div>
                               </td>
                             </tr>
