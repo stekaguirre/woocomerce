@@ -1,8 +1,13 @@
+
+
+<!--                 CONTROLLERS USUARIOS CREATE                       -->
+
 <!-- INCLUDE -->
-<?php
+ <?php
     include ("../../config.php");
   ?>
 <!-- ///INCLUDE -->
+
  <?php
     $nombres = $_POST['nombres'];
     $email = $_POST['email'];
@@ -45,11 +50,13 @@
     $sentencia->execute();
     session_start();
       $_SESSION ['mensaje'] = "Se registro al usuario de la manera correcta";
+      $_SESSION['icono'] = "success";
       header('Location: '.$URL.'/usuarios/');
 
       }else{
         session_start();
         $_SESSION ['mensaje'] = "Error las contraseñas no son iguales";
+        $_SESSION['icono'] = "error";
         header('Location: '.$URL.'/usuarios/create.php');    
       };
  ?>

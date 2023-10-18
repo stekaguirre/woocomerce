@@ -1,6 +1,9 @@
 
+
+<!--                                  USUARIOS SHOW                                    -->
+
 <!-- INCLUDE -->
-<?php
+ <?php
   include ("../app/config.php");
   include ("../layout/session.php");
   include ("../layout/header.php");
@@ -8,20 +11,20 @@
   ?>
 <!-- ///INCLUDE -->
 
-
-
-
 <!-- ///CONTENIDO DERECHO HEADER -->
-              <div class="content-wrapper">
-                <div class="content-header">
+  <div class="content-wrapper">
+  <br>
+          <!--      
+              <div class="content-header">
                   <div class="container-fluid">
                     <div class="row mb-2">
                       <div class="col-sm-12">
-                        <h1 class="m-0">Ver datos de - <?php echo $nombres; ?></h1>
+                        <h1 class="m-0">Vista de el usuario <?php echo APP_NAME; ?></h1>
                       </div>
                     </div>
                   </div>
                 </div>
+              -->
 <!-- ///CONTENIDO DERECHO HEADER -->
 
 
@@ -32,7 +35,7 @@
             <div class="col-md-10">
               <div class="card card-primary">
                 <div class="card-header">
-                  <h3 class="card-title"><?php echo $email;?></h3>
+                  <h1 class="card-title">Toda la informacion de <?php echo $nombres;?></h1>
                   <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i 
                   class="fas fa-minus"></i>
@@ -40,7 +43,6 @@
                   </div>
                   </div>
                   <div class="card-body" style="display: block;">
-                    <form action="../app/controllers/usuarios/create.php" method="post">
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
@@ -67,8 +69,6 @@
                           </div>
                         </div>
                       </div>
-                      <hr>
-                      <br>
                       <div class="row">
                         <div class="col-md-12">
                             <div class="btn-group" role="group" aria-label="Basic example">
@@ -76,9 +76,7 @@
                             </div>
                         </div>
                       </div>
-                   
                  </div>
-
               </div>
             </div>
           </div>
@@ -87,8 +85,9 @@
 <!-- ///CONTENIDO DERECHO MAIN O BODY-->
             
 
-
-  <?php include ("../layout/footer.php");?>
+  <?php include ("../layout/footer.php");
+    include ("../layout/mensajes.php");
+  ?>
 
   
 

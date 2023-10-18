@@ -1,36 +1,16 @@
 
+
+<!--                               INDEX ADMINISTRACION                                            -->
+
+
 <!-- INCLUDE -->
-<?php
+  <?php
   include ("../app/config.php");
   include ("../layout/session.php");
   include ("../layout/header.php");?>
 <!-- ///INCLUDE -->
-
-<!-- MENSAJE SWEETALERT -->
-<?php
-        
-        
-        if(isset($_SESSION['mensaje'])){
-            $respuesta = $_SESSION['mensaje'];?>
-
-            <script>
-                    Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'hola <br><?php echo $_SESSION['session_email'];?><br> Bienvenido',
-                showConfirmButton: false,
-                timer: 1500
-                })
-            </script>
-
-            <?php
-            unset($_SESSION['mensaje']);
-            }
-
-            ?>
-<!--/// MENSAJE SWEETALERT -->
-
-
+ 
+       
 <!-- ///CONTENIDO DERECHO HEADER -->
               <div class="content-wrapper">
                 <div class="content-header">
@@ -46,7 +26,7 @@
 
 
 <!-- CONTENIDO DERECHO MAIN O BODY -->
-<div class="content">
+    <div class="content">
       <div class="content-fluid">  
         <h1>contenido</h1>
       </div>
@@ -55,7 +35,10 @@
             
 
 
-  <?php include ("../layout/footer.php");?>
+  <?php 
+    include ("../layout/footer.php");
+    include ("../layout/mensajes.php");
+  ?>
 
   
 

@@ -1,27 +1,32 @@
 
+
+<!--                               USUARIOS UPDATE                           -->
+
+
 <!-- INCLUDE -->
-<?php
+ <?php
   include ("../app/config.php");
   include ("../layout/session.php");
   include ("../layout/header.php");
-  include ("../app/controllers/usuarios/show_usuarios.php");
+  include ("../app/controllers/usuarios/update_usuarios.php");
   ?>
 <!-- ///INCLUDE -->
 
 
-
-
 <!-- ///CONTENIDO DERECHO HEADER -->
-              <div class="content-wrapper">
-                <div class="content-header">
+  <div class="content-wrapper">
+  <br>
+          <!--      
+              <div class="content-header">
                   <div class="container-fluid">
                     <div class="row mb-2">
                       <div class="col-sm-12">
-                        <h1 class="m-0">Actualizar datos de - <?php echo $nombres; ?></h1>
+                        <h1 class="m-0">Editar a el usuario <?php echo APP_NAME; ?></h1>
                       </div>
                     </div>
                   </div>
                 </div>
+              -->
 <!-- ///CONTENIDO DERECHO HEADER -->
 
 
@@ -32,7 +37,7 @@
             <div class="col-md-10">
               <div class="card card-success">
                 <div class="card-header">
-                  <h3 class="card-title"><?php echo $email;?></h3>
+                  <h1 class="card-title">Estas a punto de editar la informacion de <?php echo $nombres;?></h1>
                   <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i 
                   class="fas fa-minus"></i>
@@ -40,20 +45,35 @@
                   </div>
                   </div>
                   <div class="card-body" style="display: block;">
-                    <form action="../app/controllers/usuarios/create.php" method="post">
+                    <form action="../app/controllers/usuarios/update.php" method="post">
+                      <input type="text" name="id_usuario" value="<?php echo $id_usuario_get ?>" hidden >
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label for="">Nombre y Apellido</label>
+                            <label for="">Nombre y Apellido <b>*</b></label>
                             <input type="text" name="nombres" 
-                            value="<?php echo $nombres;?>" class="form-control" disabled >
+                            value="<?php echo $nombres;?>" class="form-control" required>
                           </div>
                         </div>
                         <div class="col-md-6">
                         <div class="form-group">
-                            <label for="">Email</label>
+                            <label for="">Email </label>
                             <input type="email" name="email" 
-                            value="<?php echo $email;?>" class="form-control" disabled >
+                            value="<?php echo $email;?>" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="">Contraseña</label>
+                            <input type="text" name="password_user" class="form-control" >
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Verifica la Contraseña</label>
+                            <input type="text" name="password_repeat" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -62,25 +82,19 @@
                           <div class="form-group">
                             <label for="">Mensaje</label>
                             <input type="text" name="descripcion"  
-                            value="<?php echo $descripcion;?>" disabled 
+                            value="<?php echo $descripcion;?>" 
                             cols="30" rows="5" class="form-control"></input>
                           </div>
                         </div>
                       </div>
-                      <hr>
-                      <br>
                       <div class="row">
                         <div class="col-md-12">
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <a href="index.php" type="button" class="btn btn-secondary">Atras</a>
-                                <a href="update.php?id=<?php echo $id_usuario ?>" type="button" class="btn btn-success">Editar</a>
-                                <a href="delete.php?id=<?php echo $id_usuario ?>" type="button" class="btn btn-danger">Borrar</a>
-                            </div>
+                          <a href="<?php echo $URL; ?>/usuarios" class="btn btn-secondary">Atras</a>
+                          <button type="submit" class="btn btn-success">Actualizar</button>
                         </div>
                       </div>
-                   
+                   </form>
                  </div>
-
               </div>
             </div>
           </div>
@@ -89,8 +103,9 @@
 <!-- ///CONTENIDO DERECHO MAIN O BODY-->
             
 
-
-  <?php include ("../layout/footer.php");?>
+  <?php include ("../layout/footer.php");
+        include ("../layout/mensajes.php");
+  ?>
 
   
 
