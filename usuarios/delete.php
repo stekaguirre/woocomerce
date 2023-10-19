@@ -44,7 +44,8 @@
                   </div>
                   </div>
                   <div class="card-body" style="display: block;">
-                    <form action="../app/controllers/usuarios/create.php" method="post">
+                    <form action="../app/controllers/usuarios/delete_usuarios.php" method="post">
+                    <input type="text" name="id_usuario" value="<?php echo $id_usuario_get ?>" hidden >
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
@@ -75,8 +76,7 @@
                         <div class="col-md-12">
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a href="index.php" type="button" class="btn btn-secondary">Atras</a>
-                                <a href="update.php?id=<?php echo $id_usuario ?>" type="button" class="btn btn-success">Editar</a>
-                                <a href="delete.php?id=<?php echo $id_usuario ?>" type="button" class="btn btn-danger">Borrar</a>
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
                             </div>
                         </div>
                       </div>

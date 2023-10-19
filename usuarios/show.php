@@ -33,51 +33,57 @@
         <div class="content-fluid">
           <div class="row">
             <div class="col-md-10">
+            <!-- CONTENIDO CARD -->
               <div class="card card-primary">
-                <div class="card-header">
-                  <h1 class="card-title">Toda la informacion de <?php echo $nombres;?></h1>
-                  <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i 
-                  class="fas fa-minus"></i>
-                  </button>
+                <!-- CONTENIDO CARD HEADER -->
+                  <div class="card-header">
+                    <h1 class="card-title">Toda la informacion de <?php echo $nombres;?></h1>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse"><i 
+                      class="fas fa-minus"></i>
+                      </button>
+                    </div>
                   </div>
-                  </div>
-                  <div class="card-body" style="display: block;">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label for="">Nombre y Apellido</label>
-                            <input type="text" name="nombres" 
-                            value="<?php echo $nombres;?>" class="form-control" disabled >
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="">Email</label>
-                            <input type="email" name="email" 
-                            value="<?php echo $email;?>" class="form-control" disabled >
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label for="">Mensaje</label>
-                            <input type="text" name="descripcion"  
-                            value="<?php echo $descripcion;?>" disabled 
-                            cols="30" rows="5" class="form-control"></input>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12">
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <a href="index.php" type="button" class="btn btn-secondary">Atras</a>
+                <!--/// CONTENIDO CARD HEADER -->
+                  <!-- CONTENIDO CARD BODY -->
+                    <div class="card-body" style="display: block;">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="">Nombre y Apellido</label>
+                              <input type="text" name="nombres" 
+                              value="<?php echo $nombres;?>" class="form-control" disabled >
                             </div>
+                          </div>
+                          <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="">Email</label>
+                              <input type="email" name="email" 
+                              value="<?php echo $email;?>" class="form-control" disabled >
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                 </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="">Mensaje</label>
+                              <input type="text" name="descripcion"  
+                              value="<?php echo $descripcion;?>" disabled 
+                              cols="30" rows="5" class="form-control"></input>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                              <div class="btn-group" role="group" aria-label="Basic example">
+                                  <a href="index.php" type="button" class="btn btn-secondary">Atras</a>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                  <!--/// CONTENIDO CARD BODY -->
               </div>
+            <!--/// CONTENIDO CARD -->
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@
 
 
 <!-- INCLUDE -->
- <?php
+  <?php
   include ("../app/config.php");
   include ("../layout/session.php");
   include ("../layout/header.php");
