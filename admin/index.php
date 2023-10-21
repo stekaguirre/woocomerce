@@ -7,7 +7,9 @@
   <?php
   include ("../app/config.php");
   include ("../layout/session.php");
-  include ("../layout/header.php");?>
+  include ("../layout/header.php");
+  include ("../layout/menu_principal_admin.php");
+  include ("../layout/menu_lateral_admin.php");?>
 <!-- ///INCLUDE -->
  
        
