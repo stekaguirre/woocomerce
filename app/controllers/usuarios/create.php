@@ -11,6 +11,7 @@
  <?php
     $nombres = $_POST['nombres'];
     $email = $_POST['email'];
+    $nombre = $_POST['nombre'];
     $password_user = $_POST['password_user'];
     $password_repeat = $_POST['password_repeat'];
     $descripcion = $_POST['descripcion'];
@@ -39,11 +40,12 @@
     $password_user = password_hash($password_user,PASSWORD_DEFAULT);
 
     $sentencia = $pdo->prepare("INSERT INTO usuarios
-    ( nombres, email, password_user, descripcion, fyh_creacion) 
-    VALUES (:nombres,:email,:password_user,:descripcion,:fyh_creacion)");
+    ( nombres, email, id_rol, password_user, descripcion, fyh_creacion) 
+    VALUES (:nombres,:email,:id_rol,:password_user,:descripcion,:fyh_creacion)");
 
     $sentencia->bindParam('nombres',$nombres);
     $sentencia->bindParam('email',$email);
+    $sentencia->bindParam('id_rol',$nombre);
     $sentencia->bindParam('password_user',$password_user);
     $sentencia->bindParam('descripcion',$descripcion);
     $sentencia->bindParam('fyh_creacion',$fechahora);

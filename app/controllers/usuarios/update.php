@@ -13,6 +13,7 @@
 
     $nombres = $_POST['nombres'];
     $email = $_POST['email'];
+    $nombre = $_POST['nombre'];
     $password_user = $_POST['password_user'];
     $password_repeat = $_POST['password_repeat'];
     $descripcion = $_POST['descripcion'];
@@ -25,12 +26,14 @@
             $sentencia = $pdo->prepare("UPDATE usuarios
         SET nombres=:nombres,
             email=:email,
+            id_rol=:id_rol,
             descripcion=:descripcion,
             fyh_actualizacion=:fyh_actualizacion 
         WHERE id_usuario = :id_usuario ");
 
             $sentencia->bindParam('nombres',$nombres);
             $sentencia->bindParam('email',$email);
+            $sentencia->bindParam('id_rol',$nombre);
             $sentencia->bindParam('descripcion',$descripcion);
             $sentencia->bindParam('fyh_actualizacion',$fechahora);
             $sentencia->bindParam('id_usuario',$id_usuario);
@@ -54,6 +57,7 @@
             $sentencia = $pdo->prepare("UPDATE usuarios
         SET nombres=:nombres,
             email=:email,
+            id_rol=:id_rol,
             password_user=:password_user,
             descripcion=:descripcion,
             fyh_actualizacion=:fyh_actualizacion 
@@ -61,6 +65,7 @@
 
             $sentencia->bindParam('nombres',$nombres);
             $sentencia->bindParam('email',$email);
+            $sentencia->bindParam('id_rol',$nombre);
             $sentencia->bindParam('password_user',$password_user);
             $sentencia->bindParam('descripcion',$descripcion);
             $sentencia->bindParam('fyh_actualizacion',$fechahora);

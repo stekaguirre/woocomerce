@@ -2,14 +2,18 @@
 
 <!--                                 USUARIOS DELETE                                         -->
 
+
 <!-- INCLUDE -->
- <?php
+<?php
   include ("../app/config.php");
-  include ("../layout/session.php");
-  include ("../layout/header.php");
+  include ("../layout/admin/session.php");
+  include ("../layout/admin/header.php");
+  include ("../layout/admin/menu/principal.php");
+  include ("../layout/admin/menu/lateral.php");
   include ("../app/controllers/usuarios/show_usuarios.php");
   ?>
 <!-- ///INCLUDE -->
+
 
 
 <!-- ///CONTENIDO DERECHO HEADER -->
@@ -63,6 +67,13 @@
                         </div>
                       </div>
                       <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Rol</label>
+                            <input type="text" name="nombre" 
+                            value="<?php echo $nombre;?>" class="form-control" disabled >
+                          </div>
+                        </div>
                         <div class="col-md-6">
                           <div class="form-group">
                             <label for="">Mensaje</label>
@@ -88,11 +99,11 @@
       </div>
 <!-- ///CONTENIDO DERECHO MAIN O BODY-->
             
-
-<?php include ("../layout/footer.php");
-        include ("../layout/mensajes.php");
+<!-- CONTENIDO FOOTER Y MENSAJES -->
+<?php include ("../layout/admin/footer.php");
+      include ("../layout/admin/mensajes.php");
 ?>
-  
+<!-- ///CONTENIDO FOOTER Y MENSAJES --> 
 
 
 

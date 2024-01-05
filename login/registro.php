@@ -1,228 +1,123 @@
 <?php
-include ('../app/config.php');
+include ("../app/config.php")
 ?>
 
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>Free Snow Bootstrap Website Template | Register :: w3layouts</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<script src="js/jquery.min.js"></script>
-<script type="text/javascript">
-        $(document).ready(function() {
-            $(".dropdown img.flag").addClass("flagvisibility");
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>registro - <?php echo APP_NAME; ?></title>
 
-            $(".dropdown dt a").click(function() {
-                $(".dropdown dd ul").toggle();
-            });
-                        
-            $(".dropdown dd ul li a").click(function() {
-                var text = $(this).html();
-                $(".dropdown dt a span").html(text);
-                $(".dropdown dd ul").hide();
-                $("#result").html("Selected value is: " + getSelectedValue("sample"));
-            });
-                        
-            function getSelectedValue(id) {
-                return $("#" + id).find("dt a span.value").html();
-            }
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="<?php echo $URL;?>/public/templeates/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="<?php echo $URL;?>/public/templeates/AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="<?php echo $URL;?>/public/templeates/AdminLTE-3.2.0/dist/css/adminlte.min.css">
 
-            $(document).bind('click', function(e) {
-                var $clicked = $(e.target);
-                if (! $clicked.parents().hasClass("dropdown"))
-                    $(".dropdown dd ul").hide();
-            });
+    <!-- Libreria Sweetallert2-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+        <div class="card-header text-center">
+            <a href="index.html" class="h1"><b>Sistema de ventas</b></a>
+        </div>
+        <div class="card card-outline card-primary">
+            <center>
+                <img src="<?php echo $URL;?>/public/images/logotienda.png"
+                alt="logotienda" width="100px">
+            </center>
+        <div class="card-body">
+            <p class="login-box-msg"><b>Registrarse en el sistema</b></p>
+            
+        <!-- FORMULARIO DE REGISTRO -->    
+            <form action="<?php echo $URL;?>/app/controllers/usuarios/create.php" method="post">
+                <!-- BOTON NOMBRES -->
+                    <div class="input-group mb-3">
+                        <input type="text" name="nombres" 
+                        class="form-control" placeholder="Nombres" require >
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                    </div>
+                <!-- ////BOTON NOMBRES -->
+                <!-- BOTON EMAIL -->
+                    <div class="input-group mb-3">
+                        <input type="email" name="email" class="form-control" placeholder="Email">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                    </div>
+                <!-- ////BOTON EMAIL -->
+                <!-- BOTON CONTRASEÑA -->
+                    <div class="input-group mb-3">
+                        <input type="text" name="password_user" class="form-control" placeholder="Contraseña">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                <!-- ////BOTON CONTRASEÑA -->
+                <!-- BOTON REPITA CONTRASEÑA -->
+                    <div class="input-group mb-3">
+                        <input type="text" name="password_repeat" class="form-control" placeholder="repita la contraseña">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                <!-- ///BOTON REPITA CONTRASEÑA -->
+               <!-- MENSAJE -->
+                    <div class="input-group mb-3">
+                        <textarea name="descripcion" id="descripcion" placeholder="mensaje"
+                        cols="2" rows="1" class="form-control"></textarea>  
+                    </div>
+               <!-- MENSAJE -->
+                <!-- BOTON REGISTRO --> 
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+                        </div>  
+                    </div>
+                <!-- ////BOTON REGISTRO -->
+                <!-- IR A INGRESO -->
+                    <div class="row">
+                        <div class="col-12">
+                            <center><p>Si ya estas registrado ??</p></center>
+                            <a href="<?php echo $URL;?>/login" class="btn btn-secondary btn-block">Ingreso</a>
+                        </div>  
+                    </div>
+                <!-- ////IR A INGRESO -->
+            </form>
+        <!-- ///FORMULARIO DE REGISTRO -->
+        </div>
+        <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+</div>
+<!-- /.login-box -->
 
-
-            $("#flagSwitcher").click(function() {
-                $(".dropdown img.flag").toggleClass("flagvisibility");
-            });
-        });
-     </script>
- </head>
-<body>
-	<div class="header">
-		<div class="container">
-			<div class="row">
-			  <div class="col-md-12">
-				 <div class="header-left">
-					 <div class="logo">
-						<a href="index.html"><img src="images/logo.png" alt=""/></a>
-					 </div>
-					 <div class="menu">
-						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
-						    <ul class="nav" id="nav">
-						    	<li><a href="shop.html">Shop</a></li>
-						    	<li><a href="team.html">Team</a></li>
-						    	<li><a href="shop.html">Events</a></li>
-						    	<li><a href="experiance.html">Experiance</a></li>
-						    	<li><a href="shop.html">Company</a></li>
-								<li><a href="contact.html">Contact</a></li>								
-								<div class="clear"></div>
-							</ul>
-							<script type="text/javascript" src="js/responsive-nav.js"></script>
-				    </div>							
-	    		    <div class="clear"></div>
-	    	    </div>
-	            <div class="header_right">
-	    		  <!-- start search-->
-				   <div class="search-box">
-							<div id="sb-search" class="sb-search">
-								<form>
-									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
-									<input class="sb-search-submit" type="submit" value="">
-									<span class="sb-icon-search"> </span>
-								</form>
-							</div>
-						</div>
-						<!----search-scripts---->
-						<script src="js/classie.js"></script>
-						<script src="js/uisearch.js"></script>
-						<script>
-							new UISearch( document.getElementById( 'sb-search' ) );
-						</script>
-				     <ul class="icon1 sub-icon1 profile_img">
-					 <li><a class="active-icon c1" href="#"> </a>
-						<ul class="sub-icon1 list">
-						  <div class="product_control_buttons">
-						  	<a href="#"><img src="images/edit.png" alt=""/></a>
-						  		<a href="#"><img src="images/close_edit.png" alt=""/></a>
-						  </div>
-						   <div class="clear"></div>
-						  <li class="list_img"><img src="images/1.jpg" alt=""/></li>
-						  <li class="list_desc"><h4><a href="#">velit esse molestie</a></h4><span class="actual">1 x
-                          $12.00</span></li>
-						  <div class="login_buttons">
-							 <div class="check_button"><a href="checkout.html">Check out</a></div>
-							 <div class="login_button"><a href="login.html">Login</a></div>
-							 <div class="clear"></div>
-						  </div>
-						  <div class="clear"></div>
-						</ul>
-					 </li>
-				   </ul>
-		        <div class="clear"></div>
-	       </div>
-	      </div>
-		 </div>
-	    </div>
-	  </div>
-     <div class="main">
-      <div class="shop_top">
-	     <div class="container">
-						<form> 
-								<div class="register-top-grid">
-										<h3>PERSONAL INFORMATION</h3>
-										<div>
-											<span>First Name<label>*</label></span>
-											<input type="text"> 
-										</div>
-										<div>
-											<span>Last Name<label>*</label></span>
-											<input type="text"> 
-										</div>
-										<div>
-											<span>Email Address<label>*</label></span>
-											<input type="text"> 
-										</div>
-										<div class="clear"> </div>
-											<a class="news-letter" href="#">
-												<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up for Newsletter</label>
-											</a>
-										<div class="clear"> </div>
-								</div>
-								<div class="clear"> </div>
-								<div class="register-bottom-grid">
-										<h3>LOGIN INFORMATION</h3>
-										<div>
-											<span>Password<label>*</label></span>
-											<input type="text">
-										</div>
-										<div>
-											<span>Confirm Password<label>*</label></span>
-											<input type="text">
-										</div>
-										<div class="clear"> </div>
-								</div>
-								<div class="clear"> </div>
-								<input type="submit" value="submit">
-						</form>
-					</div>
-		   </div>
-	  </div>
-	  <div class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3">
-						<ul class="footer_box">
-							<h4>Products</h4>
-							<li><a href="#">Mens</a></li>
-							<li><a href="#">Womens</a></li>
-							<li><a href="#">Youth</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<ul class="footer_box">
-							<h4>About</h4>
-							<li><a href="#">Careers and internships</a></li>
-							<li><a href="#">Sponserships</a></li>
-							<li><a href="#">team</a></li>
-							<li><a href="#">Catalog Request/Download</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<ul class="footer_box">
-							<h4>Customer Support</h4>
-							<li><a href="#">Contact Us</a></li>
-							<li><a href="#">Shipping and Order Tracking</a></li>
-							<li><a href="#">Easy Returns</a></li>
-							<li><a href="#">Warranty</a></li>
-							<li><a href="#">Replacement Binding Parts</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<ul class="footer_box">
-							<h4>Newsletter</h4>
-							<div class="footer_search">
-				    		   <form>
-				    			<input type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
-				    			<input type="submit" value="Go">
-				    		   </form>
-					        </div>
-							<ul class="social">	
-							  <li class="facebook"><a href="#"><span> </span></a></li>
-							  <li class="twitter"><a href="#"><span> </span></a></li>
-							  <li class="instagram"><a href="#"><span> </span></a></li>	
-							  <li class="pinterest"><a href="#"><span> </span></a></li>	
-							  <li class="youtube"><a href="#"><span> </span></a></li>										  				
-						    </ul>
-		   				</ul>
-					</div>
-				</div>
-				<div class="row footer_bottom">
-				    <div class="copy">
-			           <p>© 2014 Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
-		            </div>
-					  <dl id="sample" class="dropdown">
-				        <dt><a href="#"><span>Change Region</span></a></dt>
-				        <dd>
-				            <ul>
-				                <li><a href="#">Australia<img class="flag" src="images/as.png" alt="" /><span class="value">AS</span></a></li>
-				                <li><a href="#">Sri Lanka<img class="flag" src="images/srl.png" alt="" /><span class="value">SL</span></a></li>
-				                <li><a href="#">Newziland<img class="flag" src="images/nz.png" alt="" /><span class="value">NZ</span></a></li>
-				                <li><a href="#">Pakistan<img class="flag" src="images/pk.png" alt="" /><span class="value">Pk</span></a></li>
-				                <li><a href="#">United Kingdom<img class="flag" src="images/uk.png" alt="" /><span class="value">UK</span></a></li>
-				                <li><a href="#">United States<img class="flag" src="images/us.png" alt="" /><span class="value">US</span></a></li>
-				            </ul>
-				         </dd>
-	   				  </dl>
-   				</div>
-			</div>
-		</div>
-</body>	
+<!-- jQuery -->
+<script src="<?php echo $URL;?>/public/templeates/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="<?php echo $URL;?>/public/templeates/AdminLTE-3.2.0/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="<?php echo $URL;?>/public/templeates/AdminLTE-3.2.0/dist/js/adminlte.min.js"></script>
+</body>
 </html>
+
+<!-- CONTENIDO FOOTER Y MENSAJES -->
+<?php 
+    include ("../layout/mensajes.php");
+  ?>
+<!-- ///CONTENIDO FOOTER Y MENSAJES -->
